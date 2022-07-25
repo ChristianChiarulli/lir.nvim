@@ -19,7 +19,6 @@ local highlight = {}
 function highlight.update_highlight(files)
   if config.values.devicons_enable then
     devicons.update_highlight(files)
-  else
     a.nvim_buf_clear_namespace(0, ns, 0, -1)
     for i, file in ipairs(files) do
       if file.is_dir then
@@ -30,3 +29,4 @@ function highlight.update_highlight(files)
 end
 
 return highlight
+
